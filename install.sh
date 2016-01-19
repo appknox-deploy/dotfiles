@@ -16,12 +16,12 @@ echo "Make sure you have added this machine's ssh public key to your GitHub accc
 # I guess pretty much everything else is self-explantory
 mkdir -p ~/Projects
 rm -rf ~/Projects/dotfiles
-git clone --recursive git@github.com:dhilipsiva/dotfiles.git ~/Projects/dotfiles
+git clone --recursive git@github.com:appknox-deploy/dotfiles.git ~/Projects/dotfiles
 cd ~/Projects/dotfiles
 
 echo "Installing Auto updater"
-mkdir -p ~/Library/LaunchAgents
-cp com.dhilipsiva.dependencies_updater.plist ~/Library/LaunchAgents/
-echo "installing com.dhilipsiva.dependencies_updater.plist..."
-launchctl load -w ~/Library/LaunchAgents/com.dhilipsiva.dependencies_updater.plist
+# mkdir -p ~/Library/LaunchAgents
+# cp com.dhilipsiva.dependencies_updater.plist ~/Library/LaunchAgents/
+# echo "installing com.dhilipsiva.dependencies_updater.plist..."
+# launchctl load -w ~/Library/LaunchAgents/com.dhilipsiva.dependencies_updater.plist
 ./copy.sh
